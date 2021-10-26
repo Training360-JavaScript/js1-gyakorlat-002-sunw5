@@ -15,3 +15,13 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+const checker = (arr, value) => {
+  let result = {};
+  result.exists = arr.some((item) => item == value);
+  result.index = arr.indexOf(value);
+  result.allElementsAreNumbers = arr.every((item) => typeof item === 'number');
+  result.someElementsAreNumbers = arr.some((item) => typeof item === 'number');
+
+  return result;
+}
